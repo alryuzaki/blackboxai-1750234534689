@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom styles */
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.prose h1 {
+  @apply text-4xl font-bold mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-3xl font-semibold mt-6 mb-3;
+}
+
+.prose p {
+  @apply my-4;
+}
+
+.prose ul {
+  @apply list-disc list-inside my-4;
+}
+
+.prose ol {
+  @apply list-decimal list-inside my-4;
+}
+
+.prose a {
+  @apply text-black underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.prose code {
+  @apply bg-gray-100 rounded px-1;
+}
+
+.prose pre {
+  @apply bg-gray-100 p-4 rounded my-4 overflow-x-auto;
+}
